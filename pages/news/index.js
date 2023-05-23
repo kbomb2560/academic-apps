@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useSession } from "next-auth/react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const index = () => {
-  const uri = 'http://localhost:3000/api/news';
+  const uri = `${process.env.NEXT_PUBLIC}/api/news`;
   const [data, setData] = useState(null);
   //javascript
   useEffect(() => {
